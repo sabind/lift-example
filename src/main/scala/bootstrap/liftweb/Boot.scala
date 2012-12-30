@@ -8,7 +8,6 @@ import common._
 import http._
 import sitemap._
 import Loc._
-import net.liftmodules.JQueryModule
 import net.liftweb.http.js.jquery._
 
 
@@ -49,10 +48,6 @@ class Boot {
     LiftRules.htmlProperties.default.set((r: Req) =>
       new Html5Properties(r.userAgent))
 
-    //Init the jQuery module, see http://liftweb.net/jquery for more information.
-    LiftRules.jsArtifacts = JQueryArtifacts
-    JQueryModule.InitParam.JQuery=JQueryModule.JQuery172
-    JQueryModule.init()
 
   }
 }
