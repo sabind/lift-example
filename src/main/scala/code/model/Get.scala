@@ -16,5 +16,5 @@ trait Get[A] {
   
   val json: JValue = parse(""" { "name": "joe" } """)
 
-  def get[A](implicit m: Manifest[A]): A = json.extract[A]
+  def get(implicit m: Manifest[A]): A = json.extract[A]
 }
